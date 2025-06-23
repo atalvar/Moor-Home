@@ -10,7 +10,7 @@ import ContactPage from './pages/ContactPage';
 function App() {
   return (
     <CartProvider>
-      <Router basename="/Moor-Home">
+      <Router basename="/Moor-Home/">
         <div className="min-h-screen flex flex-col">
           <Header />
           <main className="flex-1">

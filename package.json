@@ -2,11 +2,13 @@
   "name": "vite-react-typescript-starter",
   "private": true,
   "version": "0.0.0",
+  "homepage": " https://atalvar.github.io/Moor-Home/",
   "type": "module",
   "scripts": {
     "dev": "vite",
+      "predeploy": "npm run build",
+      "deploy": "gh-pages -d build",
     "build": "vite build",
-    "deploy": "gh-pages -d dist",
     "lint": "eslint .",
     "preview": "vite preview",
     "postinstall": "node remove-fingerprint.js"
