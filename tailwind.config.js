@@ -29,10 +29,10 @@ export default {
           900: '#051006',
         }
       },
-      fontFamily: {
-        serif: ['Georgia', 'Times New Roman', 'serif'],
-        sans: ['Inter', 'system-ui', 'sans-serif'],
-      },
+  fontFamily: {
+  serif: ['Georgia', 'Times New Roman', 'serif'],
+  sans: ['Inter', 'system-ui', 'sans-serif'],
+},
     },
   },
   plugins: [],

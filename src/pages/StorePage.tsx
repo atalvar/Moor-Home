@@ -6,14 +6,12 @@ import { RefreshCw, AlertCircle } from 'lucide-react';
 
 interface FilterState {
   category: string;
-  priceRange: string;
 }
 
 const StorePage: React.FC = () => {
   const { products, loading, error } = useGoogleSheets();
   const [filters, setFilters] = useState<FilterState>({
-    category: 'Kõik',
-    priceRange: 'Kõik'
+    category: 'Kõik'
   });
   const [filtersOpen, setFiltersOpen] = useState(false);
 
@@ -22,24 +20,6 @@ const StorePage: React.FC = () => {
       // Category filter
       if (filters.category !== 'Kõik' && product.category !== filters.category) {
         return false;
-      }
-
-      // Price range filter
-      if (filters.priceRange !== 'Kõik') {
-        switch (filters.priceRange) {
-          case 'Alla €500':
-            if (product.price >= 500) return false;
-            break;
-          case '€500-€1000':
-            if (product.price < 500 || product.price > 1000) return false;
-            break;
-          case '€1000-€2000':
-            if (product.price < 1000 || product.price > 2000) return false;
-            break;
-          case 'Üle €2000':
-            if (product.price <= 2000) return false;
-            break;
-        }
       }
 
       return true;
@@ -52,8 +32,7 @@ const StorePage: React.FC = () => {
 
   const handleClearFilters = () => {
     setFilters({
-      category: 'Kõik',
-      priceRange: 'Kõik'
+      category: 'Kõik'
     });
   };
 
